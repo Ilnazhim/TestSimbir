@@ -4,6 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common import NoSuchElementException, TimeoutException
 
 
+
+
 class BaseClass:
 
     def __init__(self, browser, url):
@@ -23,9 +25,9 @@ class BaseClass:
     """Metod assert word"""
     def assert_word(self, word, result):
         value_word = word.text
-        value_result = result.text
-        assert value_word == value_result
+        assert value_word == result
         print("Good value word")
+
 
     """Metod is element present"""
     def is_element_present(self, how, what):
@@ -65,4 +67,13 @@ class BaseClass:
         get_url = self.browser.current_url
         assert get_url == result
         print("Good value url")
+
+    def return_amount():
+        date_now = int(datetime.datetime.utcnow().strftime('%d')) + 1
+        def fibonacci_recursive(n):
+            if n <= 1:
+                return n
+            else:
+                return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
+        return fibonacci_recursive(date_now)
 
