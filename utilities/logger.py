@@ -2,8 +2,8 @@ import datetime
 import os
 
 
-class Logger():
-    file_name = f"C:\\Users\\ilnazhim\\environments\\StepikAlexFinishProject\\logs\\log_" + str(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) + ".log"
+class Logger:
+    file_name = f"C:\\Users\\ilnazhim\\environments\\SimbirSoft\\logs\\log_" + str(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) + ".log"
 
     @classmethod
     def write_log_to_file(cls, data: str):

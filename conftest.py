@@ -1,8 +1,6 @@
 import pytest
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
-from pages.links import LinkPage
-from pages.login_page import LoginPage
 
 
 @pytest.fixture(scope="function")
