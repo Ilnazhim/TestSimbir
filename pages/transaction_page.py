@@ -59,5 +59,6 @@ class TransactionsPage(BaseClass):
                     file.write(self.get_debit_transaction_date().text + ' ')
                     file.write(self.get_debit_transaction_amount().text + ' ')
                     file.write(self.get_debit_transaction_type().text)
+            self.get_screenshot()
             allure.attach.file("C:\\Users\\ilnazhim\\environments\\SimbirSoft\\file.csv", attachment_type=allure.attachment_type.CSV)
             Logger.add_end_step(url=self.browser.current_url, method="Add file")
